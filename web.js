@@ -6,7 +6,7 @@ var app = express.createServer(express.logger());
 app.get('/', function(request, response) {
 	
   //response.send('Hello World2!');
-	response.send(fs.readFileSync('index.html'), 'utf-8', function(error, data) {
+	response.send(fs.readFileSync('index.html'), 'utf8', function(error, data) {
 		if (error) {
 			console.log(error);
 			throw error;
