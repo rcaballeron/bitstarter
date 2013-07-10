@@ -12,7 +12,7 @@ app.get('/', function(request, response) {
 			throw error;
 		}
 		buf = new Buffer(data);
-		return buf.toString();
+		response.send(buf.toString());
 	});
 });
 
